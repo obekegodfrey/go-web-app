@@ -1,0 +1,15 @@
+#THis is a service file for go-web-app
+apiVersion: v1 
+kind: service
+metadata:
+  name: go-web-app
+  labels:
+    app: go-web-app
+spec:
+  ports:
+  - ports: 80
+    targetPort: 8080
+    protocol: TCP
+  selector:
+    app: go-web-app
+  type: clusterIP
